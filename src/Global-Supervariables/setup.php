@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class "container">
+  
      <h1>Top 5 series</h1>
          <form name="form1" action="result.php" method="POST" > 
              <input type="text" name="serie1" value="Arrow"> 
@@ -25,18 +26,20 @@
              <input type="text" name="movie4" value="Fantastic Beast: The Crimes Of Grindelwald">  
              <input type="text" name="movie5" value="FIfty Shades Freed">    
 </br>
-                <input id="submit" type="submit" name="submit" value="Submit">
+                <input id="submit1" type="submit" name="submit" value="Submit">
         </form>
-
-        <form name="form2" action="result.php" method="GET">
+       
         <h2>Your favourite country:</h2>
-       <input id="bovenste_input" type= "text" name="country" value="">
+        <form name="form2" action="result.php" method="GET">
+               <input id="bovenste_input" type= "text" name="country" value="">
        <h2>Your worst movie ever:</h2>
         <input id="onderste_input" type= "text" name="worst_movie" value="">
     </br>
-        <input id="submit" type="submit" name="submit" value="Submit">
+        <input id="submit2" type="submit" name="submit" value="Submit">
     </form>
-
+    </br>
+    
+    
     </div>
 
         <?php 
