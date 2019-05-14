@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -9,7 +13,7 @@
 </head>
 <body>
     <div class "container">
-  
+
      <h1>Top 5 series</h1>
          <form name="form1" action="result.php" method="POST" > 
              <input type="text" name="serie1" value="Arrow"> 
@@ -38,14 +42,13 @@
         <input id="submit2" type="submit" name="submit" value="Submit">
     </form>
     </br>
-    
+  
+
     
     </div>
 
-        <?php 
+  
        
-        
-        ?> 
 
 
     

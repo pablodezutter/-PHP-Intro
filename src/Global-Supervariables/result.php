@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -103,20 +107,11 @@
                        echo "<h2>Your worst movie ever:</h2>\n";
                         echo $_GET["worst_movie"];
                     ?>
-      <?php
-     if ($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"] == "GET") {
-        // collect value of input field
-        $name = $_REQUEST['toppie'];
-        if (empty($name)) {
-            echo "Name is empty";
-        } else {
-            echo $name;
-        }
-    }
+ 
      
 
-      ?>
-      <p>Time elapsed:
+      
+      <p>Timestamp:
 
                     <?php
                     $info1=$_SERVER['REQUEST_TIME'];
@@ -131,6 +126,32 @@
 
                      ?>
         </p>
+        <p>Server info:
+                    <?php 
+                                     
+                     $info3= $_SERVER['SERVER_SOFTWARE'];
+                     echo $info3;
+
+                     ?>
+        </p>
+        <p>Remote port info:
+                    <?php 
+                                     
+                     $info4= $_SERVER['REMOTE_PORT'];
+                     echo $info4;
+
+                     ?>
+        </p>
+
+
+    <?php
+     if(isset($_REQUEST["form2"])){
+      print_r ($_REQUEST);
+      $vragen= htmlentities($_REQUEST["form2"]);
+        echo $vragen;
+     }
+      
+      ?> 
       
     </div>
 
