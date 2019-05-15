@@ -13,6 +13,10 @@ session_start();
 </head>
 <body>
     <div class "container">
+    <div><form name="user" action="result1.php" method="POST">Fill in your name:
+    <input type="text" name="username" value="">
+    </form>
+    </div>
 
      <h1>Top 5 series</h1>
          <form name="form1" action="result1.php" method="POST"> <!--change between result and result1 -->

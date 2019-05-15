@@ -1,6 +1,7 @@
 <?php
 // Start the session
 session_start();
+$_SESSION["starting_up"]= "completed";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,32 +40,38 @@ session_start();
             // echo $_REQUEST["country"];
 
 if($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"]=="GET"){
+     //required fields//
     if(empty($_POST["country"])){
-       echo "invullen graag";
+       echo "EMPTY";
     }else{ 
         echo $_POST["country"];
     }
         
             echo "<h2>Your worst movie ever:</h2>\n";
             echo $_REQUEST["worst_movie"];
-           
+};
         ?>
+
+     <!-- $questionErr = "";
+ $veld1 = 'country';-->
 <?php
-        //required fields//
-
-// $questionErr = "";
-// $veld1 = 'country';
-
-
-
-}
-
-
-
 
 ?>
+<?php
+$_COOKIE="Hmmm Cookies";
+setrawcookie();
+print_r($_COOKIE);
+?>
+</br>
+<?php
+echo "my username is ".$_ENV['username'];
+?>
+</br>
         
-      
+        <?php
+echo $_SESSION["starting_up"];
+?>  
+</br>
     
 </body>
 </html>
