@@ -15,7 +15,7 @@ session_start();
     <div class "container">
 
      <h1>Top 5 series</h1>
-         <form name="form1" action="result1.php" method="POST"> 
+         <form name="form1" action="result1.php" method="POST"> <!--change between result and result1 -->
              <input type="text" name="serie1" value="Arrow"> 
              <input type="text" name="serie2" value="Dynasty">  
              <input type="text" name="serie3" value="Star Trek: Discovery">  
@@ -26,16 +26,17 @@ session_start();
              
 
             <h1>Top 5 movies </h1>
-            <form name"form1a" action"result1.php" method="POST">
+            <form name="form1a" action="result1.php" method="POST"><!--change between result and result1 -->
              <input type="text" name="movie1" value="The Incredibles 2"> 
              <input type="text" name="movie2" value="Jurassic World: Fallen Kingdom">  
              <input type="text" name="movie3" value="Avengers: Inifinity War - Part I">  
              <input type="text" name="movie4" value="Fantastic Beast: The Crimes Of Grindelwald">  
-             <input type="text" name="movie5" value="FIfty Shades Freed">    
+             <input type="text" name="movie5" value="FIfty Shades Freed">  
+             <input id="submit2" type="submit" name="submit" value="Submit">
              </form>
 </br>
-                <input id="submit1" type="submit" name="submit" value="Submit">
-        </form>
+                
+       
        
         <h2>Your favourite country:</h2>
         <form name="form2" action="result.php" method="GET">
@@ -46,7 +47,33 @@ session_start();
         <input id="submit2" type="submit" name="submit" value="Submit">
     </form>
     </br>
-  
+
+    <h1>Top 5 series</h1>
+         <form name="form0" action="result1.php" method="POST"> <!--change between result and result1 -->
+             <input type="text" name="serie1" value="Arrow"> 
+             <input type="text" name="serie2" value="Dynasty">  
+             <input type="text" name="serie3" value="Star Trek: Discovery">  
+             <input type="text" name="serie4" value="Riverdale">  
+             <input type="text" name="serie5" value="The Flash">   
+                                     
+
+            <h1>Top 5 movies </h1>
+            <form name="form1a" action="result1.php" method="POST"><!--change between result and result1 -->
+             <input type="text" name="movie1" value="The Incredibles 2"> 
+             <input type="text" name="movie2" value="Jurassic World: Fallen Kingdom">  
+             <input type="text" name="movie3" value="Avengers: Inifinity War - Part I">  
+             <input type="text" name="movie4" value="Fantastic Beast: The Crimes Of Grindelwald">  
+             <input type="text" name="movie5" value="FIfty Shades Freed">  
+             
+             
+             <h2>Your favourite country:</h2>
+        <form name="form2" action="result1.php" method="GET">
+               <input id="bovenste_input" type= "text" name="country" value="">
+               </br>
+        <input id="onderste_input" type= "text" name="worst_movie" value="">
+    </br>
+        <input id="submit2" type="submit" name="submit" value="Submit">
+    </form>
 
     
     </div>

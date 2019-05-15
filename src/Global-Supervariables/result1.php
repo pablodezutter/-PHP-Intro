@@ -15,20 +15,56 @@ session_start();
 <body>
 <div class="container">
             <h1>Your data</h1>
-        <h2>Top 5 series</h2>
+       
         <?php
-         
+            echo  "<h2>Top 5 series:</h2>\n";
+
             echo "<p>".$_REQUEST["serie1"]."</p>";
             echo "<p>".$_REQUEST["serie2"]."</p>";
             echo "<p>".$_REQUEST["serie3"]."</p>";
             echo "<p>".$_REQUEST["serie4"]."</p>";
             echo "<p>".$_REQUEST["serie5"]."</p>";
            
-       
+           
+            echo "<h2>Top 5 movies:</h2>\n";
+
+            echo "<p>".$_REQUEST["movie1"]."</p>";
+            echo "<p>".$_REQUEST["movie2"]."</p>";
+            echo "<p>".$_REQUEST["movie3"]."</p>";
+            echo "<p>".$_REQUEST["movie4"]."</p>";
+            echo "<p>".$_REQUEST["movie5"]."</p>";
+
+
+        echo "<h2>Your favourite country:</h2>\n";
+            // echo $_REQUEST["country"];
+
+if($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"]=="GET"){
+    if(empty($_POST["country"])){
+       echo "invullen graag";
+    }else{ 
+        echo $_POST["country"];
+    }
+        
+            echo "<h2>Your worst movie ever:</h2>\n";
+            echo $_REQUEST["worst_movie"];
+           
         ?>
-        <h2>Top 5 movies </h2>
-        <h2>Your favourite country:</h2>
-        <h2>Your worst movie ever:</h2>
+<?php
+        //required fields//
+
+// $questionErr = "";
+// $veld1 = 'country';
+
+
+
+}
+
+
+
+
+?>
+        
+      
     
 </body>
 </html>
