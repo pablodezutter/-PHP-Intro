@@ -1,6 +1,7 @@
 <?php
 //start session
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,44 +14,31 @@ session_start();
 </head>
 <body>
 <?php
-$_SESSION[$name]="pablo";
-$_SESSION[$wachtwoord]="blij";
-
-// if (isset($_POST['Submit1'])) {
-
-//     $username = $_POST['username'];
-    
-//     if ($username == "letmein") {
-    
-//     print ("Welcome back, friend!");
-    
-//     }
-//     else {
-    
-//     print ("You're not a member of this site");
-    
-//     }
-    
-//     }
-    
-    
 
 
+if (isset($_POST['submit'])){
+    $username=$_POST["username"];
+    $passwoord=$_POST["wachtwoord"];
 
+    $name="Pablo";
+    $code="Polo";
 
-if ($_SERVER['REQUEST_METHOD'] == "POST"){
-    if ($_POST["username"] == $_SESSION[$name] && $_POST ["wachtwoord"] == $_SESSION[$wachtwoord]) {
-    echo "<p>welkom!</p>";
-    }
+    $_SESSION["$name"]; //= "Pablo";
+    $_SESSION["$code"]; //= "Polo";
+
+        if($name === $username && $code === $passwoord){
+            echo "Welkom" . $name . "</br>";
+
+        }
+
 }
-
 ?>
 
 <div class="container mt-3 ml-5">
     <h1>Log in</h1>
     </br>
     <form  action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-    <p>Gebruikersnaam</p><input type="text" name="name" value="">
+    <p>Gebruikersnaam</p><input type="text" name="username" value="">
    
     </br>
     
