@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"]=="GET"){
         
             echo "<h2>Your worst movie ever:</h2>\n";
             echo $_REQUEST["worst_movie"];
-};
+}
         ?>
 
      <!-- $questionErr = "";
@@ -57,14 +57,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"]=="GET"){
 <?php
 
 ?>
-<?php
-$_COOKIE="Hmmm Cookies";
-setrawcookie();
-print_r($_COOKIE);
+ <?php
+/*$_COOKIE=" ";
+setrawcookie("yourcookie");
+print_r($_COOKIE);*/
 ?>
 </br>
 <?php
-echo "my username is ".$_ENV['username'];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    if(empty($_POST["username"])){
+echo "my username is ". $_ENV["username"];
+}
+}
 ?>
 </br>
         
