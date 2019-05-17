@@ -20,11 +20,12 @@ session_start();
 
      <h1>Top 5 series</h1>
          <form name="form1" action="result1.php" method="POST"> <!--change between result and result1 -->
-             <input type="text" name="serie1" value="Arrow"> 
-             <input type="text" name="serie2" value="Dynasty">  
-             <input type="text" name="serie3" value="Star Trek: Discovery">  
-             <input type="text" name="serie4" value="Riverdale">  
-             <input type="text" name="serie5" value="The Flash">   
+         <!--put <p> cauz all el are then block level, input is inline-->
+             <p><input type="text" name="serie1" value="Arrow"></p> 
+             <p><input type="text" name="serie2" value="Dynasty"></p>  
+             <p><input type="text" name="serie3" value="Star Trek: Discovery"></p>  
+             <p><input type="text" name="serie4" value="Riverdale"> </p> 
+             <p><input type="text" name="serie5" value="The Flash"> </p>  
              <input id="submit1" type="submit" name="submit" value="Submit">
              </form>
              

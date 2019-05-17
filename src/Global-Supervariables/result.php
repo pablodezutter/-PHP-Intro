@@ -13,8 +13,22 @@ session_start();
     <link href= "mystyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
-            <h1>Your data</h1>
+<?php
+if ($_SERVER[REQUEST_METHOD] == $_POST){
+    $moviesarray= array();
+    $seriesarray= array();
+    for($x=1;$x<=5;$x++){
+        array_push($moviesarray($_POST["movies"$x]));
+        array_push($seriesarray($_POST["series"$x]));
+        echo 
+    }
+
+
+}
+
+?>
+    <!-- <div class="container"> -->
+            <!-- <h1>Your data</h1>
         <h2>Top 5 series</h2>
             <ul>
                  <li>
@@ -142,7 +156,7 @@ session_start();
 
                      ?>
         </p>
-
+ -->
 
     <?php
      if(isset($_REQUEST["form2"])){

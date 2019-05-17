@@ -30,7 +30,6 @@ if (isset($_POST['submit'])){
             echo "Welkom" . $name . "</br>";
 
         }
-
 }
 ?>
 
