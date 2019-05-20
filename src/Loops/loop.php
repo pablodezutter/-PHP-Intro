@@ -45,7 +45,17 @@
             </tbody>
         </table>
     </div>
+<?PHP 
+//TO DO :
+//make every first cell an "a", clickable object if array is a string
+//link to a google search page
+//var_dump
+$arr2 = array();
+foreach ($tvshows as $show) {
+    $arr2[] = $show['tvshow'];
+ echo $arr2;
 
+?>
 
 
 
