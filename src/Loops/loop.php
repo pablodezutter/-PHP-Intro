@@ -39,7 +39,7 @@
             <tbody>
                 <?php foreach($tvshows as $arr): ?>
                     <tr>
-                        <td><a href="http://www.google.com/search?q="><?php echo $arr["tvshow"]; ?></a></td>
+                        <td><a href="http://www.google.com/search?q=<?php echo $arr["tvshow"]; ?>" target='_blank'><?php echo $arr["tvshow"]; ?></a></td>
                         <td><?php echo $arr["rating"]; ?></td>
                     </tr>
                 <?php endforeach; ?>
