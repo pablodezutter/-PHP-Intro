@@ -14,7 +14,7 @@
 
     $tvshows = [
         ["tvshow" => "Game of Thrones", "rating" => 9], //0
-        ["tvshow" => "Dead To Me", "rating" => 8], //1
+        ["tvshow" => "Dead To Me", "rating" => 11], //1
         ["tvshow" => "The Big Bang Theory", "rating" => 8],
         ["tvshow" => "Grey's Anatomy", "rating" => 7],
         ["tvshow" => "The Flash", "rating" => 8],
@@ -22,15 +22,20 @@
         ["tvshow" => "Black Mirror", "rating" => 8],
         ["tvshow" => "Blackadder II", "rating" => 8],
         ["tvshow" => "Ironside", "rating" => 3],
-        ["tvshow" => "We are men", "rating" => 2]
+        ["tvshow" => "We are men", "rating" => 4]
     ];
 
     // var_dump($tvshows);
+   
   
 
+
+
+
 ?>
+
    
-     <div class="container">
+      <div class="container">
         <table class="table mt-5">
             <thead>
                 <tr>
@@ -38,16 +43,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($tvshows as $arr): ?>
+                 <?php foreach($tvshows as $arr): ?>
                     <tr>
                         <td><a href="http://www.google.com/search?q=<?php echo $arr["tvshow"]; ?>" target='_blank'><?php echo $arr["tvshow"]; ?></a></td>
-                        <td><?php echo $arr["rating"]; ?></td>
+                        <td><?php for($i=0; $i<$arr["rating"]; $i++ ){
+                            echo "<i class='fas fa-star'></i>";
+                        } ?></td>
                         </tr>
-                <?php endforeach; ?>
+                <?php endforeach; ?> 
                
             </tbody>
         </table>
-    </div>
+    </div> 
 
 <!--  
 TO DO :
