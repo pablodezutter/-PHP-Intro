@@ -24,11 +24,12 @@
         ["tvshow" => "We are men", "rating" => 2]
     ];
 
-    //var_dump($tvshows);
+    // var_dump($tvshows);
+  
 
 ?>
    
-    <div class="container">
+     <div class="container">
         <table class="table mt-5">
             <thead>
                 <tr>
@@ -38,25 +39,23 @@
             <tbody>
                 <?php foreach($tvshows as $arr): ?>
                     <tr>
-                        <td><?php echo $arr["tvshow"]; ?></td>
+                        <td><a href="http://www.google.com/search?q="><?php echo $arr["tvshow"]; ?></a></td>
                         <td><?php echo $arr["rating"]; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-<?PHP 
-//TO DO :
-//make every first cell an "a", clickable object if array is a string
-//link to a google search page
-//var_dump
-$arr2 = array();
-foreach ($tvshows as $show) {
-    $arr2[] = $show['tvshow'];
- echo $arr2;
 
-?>
+<!--  
+TO DO :
+make every first cell an "a", clickable object if array is a string
+link to a google search page
+var_dump -->
+<?php
 
+?>  
+ 
 
 
 

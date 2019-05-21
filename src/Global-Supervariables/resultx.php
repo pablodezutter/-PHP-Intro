@@ -21,29 +21,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         array_push($moviesarray,$_POST["movie$x"]);
         array_push($seriesarray,$_POST["serie$x"]);
     }
-        echo "<p class='title'>Favourite movies:</p></br>";
-        printall($moviesarray);
+        // echo "<p class='title'>Favourite movies:</p></br>";
+        // printall($moviesarray);
         //echo "<ul>";
     //         foreach($moviesarray as $movie){
     //        // echo ("<li>".$movie."</li>");
     //     }
     //    // echo"</ul>";//buiten foreach
-        echo "<p class='title'>Favourite series:</p></br>";
-        printall($seriesarray);
+        // echo "<p class='title'>Favourite series:</p></br>";
+        // printall($seriesarray);
     //     foreach($seriesarray as $serie){
     //         echo("<li>".$serie."</li>");
         // }
 }else if ($_SERVER["REQUEST_METHOD"] == "GET"){
-    echo "Favorite country:$_GET[country]</br>
-    Worst movie: $_GET[worst_movie]";
+    // echo "Favorite country:$_GET[country]</br>
+    // Worst movie: $_GET[worst_movie]";
 } 
 
 function printall($data){
     echo "<ol>";
     foreach($data as $element){
-        echo"<li>$element</li>";
+        echo "<li>$element</li>";
     }
-    echo"</ol>";
+    echo "</ol>";
 }
 
 ?>
@@ -51,22 +51,22 @@ function printall($data){
 <!--html code voor tabs-->
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#menu1">Movies</a> <!--# niet vergeten om link te maken-->
+    <a class="nav-link" data-toggle="pill" href="#menu1">Movies</a> <!--# niet vergeten om link te maken-->
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="menu2">Shows</a>
+    <a class="nav-link" data-toggle="pill"  href="#menu2">Shows</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="menu3">Favourite Country/Worst Movie</a>
+    <a class="nav-link" data-toggle="pill" href="#menu3">Favourite Country/Worst Movie</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Superdata</a>
+    <a class="nav-link" data-toggle="pill" href="#Superdata.php">Superdata</a>
   </li>
 </ul>
 
 <div class="tab-content">
     <div id="menu1" class="tab-pane fade in active">
-        <h3>Top Movies</h3>
+        <h3>Top movies</h3>
         <p><?php printall($moviesarray);
         ?></p>
     </div>

@@ -19,37 +19,53 @@
                     <p>Push this button</p>
                     <button class="btn btn-success action="Lottery.php" method="POST" ">Play now</button>
                     </br>
-                    <input name="0" type="image">
+                    <ul>
+                    <?php
+                        $pic = array('burger0.png', 'friet1.png','pizza2.png');
+                        shuffle($pic);
+                        //var_dump ($pic);
+                        for ($i=0;$i>2;$i++){
+                            echo "<li><img src='$pic[$i]'></li>" . "</br>";
+                            echo "<li><img src='$pic[$i]'></li>" . "</br>";
+                            echo "<li><img src='$pic[$i]'></li>" . "</br>";
+                        }
+                        ?>
+                    </ul>
+                    <!-- <input name="0" type="image">
                     <input name="1" type="image">
-                    <input name="2" type="image">
+                    <input name="2" type="image"> -->
 
                      </p>  
             </div>
         </div>
 </div>
-<?php
-$img_0="img/burger0.png";
-$img_1="img/friet1.png";
-$img_2="img/friet1.png";
-$randomPic =rand(0,2);
 
 
-if ($randomPic == 0){
-    echo $pic1 ='<img src="' . $img_0 . '"/>';
-}
+
+//First try:
+// $img_0="img/burger0.png";
+// $img_1="img/friet1.png";
+// $img_2="img/pizza2.png";
+// $randomPic =rand(0,2);
 
 
-if ($randomPic == 1){
-    echo $pic2= '<img src="' . $img_1 . '"/>';
-    }
+// if ($randomPic == 0){
+//     echo $pic1 ='<img src="' . $img_0 . '"/>';
+// }
 
 
-    if ($randomPic == 2){
-        echo $pic3= '<img src="' . $img_2 . '"/>';
-        }
+// if ($randomPic == 1){
+//     echo $pic2= '<img src="' . $img_1 . '"/>';
+//     }
 
 
-?>
+//     if ($randomPic == 2){
+//         echo $pic3= '<img src="' . $img_2 . '"/>';
+//         }
+
+
+//?>
+
 
 
 </body>

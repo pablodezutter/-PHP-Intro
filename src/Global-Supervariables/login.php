@@ -1,6 +1,7 @@
 <?php
 //start session
 session_start();
+setcookie("test_cookie", "test", time()+0);
 
 ?>
 <!DOCTYPE html>
@@ -14,6 +15,16 @@ session_start();
 </head>
 <body>
 <?php
+if(isset($_COOKIE) > 0) {
+    echo "Cookies are go.";
+} else {
+    echo "Cookies are no go.";
+}
+?>
+</br>
+<?php
+
+
 
 
 if (isset($_POST['submit'])){
@@ -27,7 +38,7 @@ if (isset($_POST['submit'])){
     $_SESSION["$code"]; //= "Polo";
 
         if($name === $username && $code === $passwoord){
-            echo "Welkom" . $name . "</br>";
+            echo "Welkom" ." " . $name . "</br>";
 
         }
 }
