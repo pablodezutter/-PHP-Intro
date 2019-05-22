@@ -17,15 +17,21 @@
 </br>
 <?php
 $arrayImages= ['img/burger0.png','img/friet1.png','img/pizza2.png'];
-shuffle($arrayImages);
+$loting=[];
+// shuffle($arrayImages); werkt, maar zorgt ervoor dat je nooit 3x dezelfde hebt
   for ($i=0;$i<3;$i++){
-$random=rand(0,2);
+$random=rand(0,2);// kan ook met gekozen image; 
+array_push($loting,$random);
 ?>
  
                 <div class="col"><img src="<?php echo $arrayImages[$random]; ?>" /></div>
               
  <?php } 
-        
+        if(sizeof(array_unique($loting))== 1){ //lengte van de lijst met unieke waarden = 1
+         echo "you win";
+        }else{
+            echo "try again?";
+        }
  
       ?>
  </div>

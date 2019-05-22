@@ -14,12 +14,23 @@
 
         <div class="row">
             <div class="col">
-                    <h1>Welkom to the lottery!</h1>
-                    <h2>Wanna play?</h2>
-                        <p>Push this button</p>
-                        <button class="btn btn-success">Play now</button>
-            
-                        </p>  
+            <h1>Play a game</h1>
+</br>
+               <form>
+                <div class="col">  
+                <input name="one"></div>
+                <div class="col"> 
+                <input name="two"></div>
+                <div class="col"> 
+                <input name="three"></div>
+                </form>
+        </div>
+      </div>
+<?php
+                  
+
+
+                  ?>
             </div>
         </div>
     </div>

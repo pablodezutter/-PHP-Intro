@@ -21,19 +21,22 @@
                     </br>
                     <ul>
                     <?php
-                        $pic = array('burger0.png', 'friet1.png','pizza2.png');
+                        $pics = array("burger0.png", "friet1.png", "pizza2.png");
                         shuffle($pic);
+                        foreach ($pics as $pic)
+                        echo "<img src='Loops/img/burger0.png'> </br>";
+                        
                         //var_dump ($pic);
-                        for ($i=0;$i>2;$i++){
+                        for ($i=0;$i<2;$i++){
                             echo "<li><img src='$pic[$i]'></li>" . "</br>";
                             echo "<li><img src='$pic[$i]'></li>" . "</br>";
                             echo "<li><img src='$pic[$i]'></li>" . "</br>";
                         }
                         ?>
                     </ul>
-                    <!-- <input name="0" type="image">
+                    <input name="0" type="image">
                     <input name="1" type="image">
-                    <input name="2" type="image"> -->
+                    <input name="2" type="image">
 
                      </p>  
             </div>
@@ -43,7 +46,7 @@
 
 
 //First try:
-// $img_0="img/burger0.png";
+ //$img_0="img/burger0.png";
 // $img_1="img/friet1.png";
 // $img_2="img/pizza2.png";
 // $randomPic =rand(0,2);
