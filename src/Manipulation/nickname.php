@@ -50,14 +50,26 @@
                 <?php 
                $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
                 echo $randomString . $inputName2;
-
-
                 ?>
                 <br>
-
-
-
-                </div>
+                <?php 
+               $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
+                echo '['. $randomString . ']' . $inputName2;
+                ?>
+                <br>
+                <?php 
+               $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
+               $randChar = mt_rand($randomString,1);
+                echo strtoupper($randChar);
+              
+                ?>
+               
+            
+            
+            
+            
+            
+            </div>
 
 
 
