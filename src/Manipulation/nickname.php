@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-4">
         <div class="row">       
             <div class="col">
                 <p>Hawdy over there! So, you are into a fancy cool nickname ey?
@@ -33,11 +33,30 @@
                 echo $inputName;?>
                 <br>
                 <?php echo strrev($inputName); ?>
+                <br>
+                <?php echo strtoupper($inputName);
+                ?>
+                <br>
+                <?php 
+                $inputName2= strtoupper($inputName);
+                echo strrev($inputName2); ?>
+                <br>
+                <?php echo str_pad($inputName2, strlen($inputName2) + 4  , "-", STR_PAD_BOTH );
+                ?>
+                <br>
+                <?php echo str_pad($inputName2,strlen($inputName2) + 1 , "x", STR_PAD_LEFT);
+                ?>
+                <br>
+                <?php 
+               $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
+                echo $randomString . $inputName2;
+
+
+                ?>
+                <br>
 
 
 
-
-                
                 </div>
 
 
@@ -52,7 +71,7 @@
         </div>
 
 
-       <p id="source">Source:Photo by Annie Spratt on Unsplash</p>
+       <p id="source">Source: Photo by Annie Spratt on Unsplash</p>
     </div>
 
  <!-- <?php
