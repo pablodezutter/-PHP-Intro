@@ -1,0 +1,41 @@
+body{
+margin: 0 auto;
+
+
+}
+.container{
+    background-image:url("img/flowers.jpg");
+height: 800px;
+}
+
+.form-control-sm{
+margin: 40px;
+
+
+}
+.btn-outline-success{
+margin: 40px;
+padding: 20px;
+
+}
+p{
+padding: 50px;
+margin:50px;
+font-size:20px;
+font-family:'Montaga', serif;
+color: white;
+
+}
+#textfield{
+font-size: 16px;
+font-family:'Montaga', serif; 
+color: white;
+
+}
+#source{
+font-style: italic;
+color: white;
+vertical-align: text-bottom;
+text-align: right;
+
+}
