@@ -27,7 +27,7 @@
             <input type="text" class="form-control-sm" name="inputUser">
                  <button type="submit" class="btn btn-outline-success">Give it a try!</button>
             </form>
-                <div id="textfield">
+                <span id="textfield">
                 <?php 
                 $inputName=$_POST["inputUser"];
                 echo $inputName;?>
@@ -57,11 +57,27 @@
                 echo '['. $randomString . ']' . $inputName2;
                 ?>
                 <br>
-                <?php 
-               $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
-               $randChar = mt_rand($randomString,1);
-                echo strtoupper($randChar);
-              
+            
+                <?php
+                //Get the length of the string.
+                $stringLength = strlen($randomString);
+ 
+                //Generate a random index based on the string in question.
+                $randomIndex = mt_rand(0, $stringLength - 0);
+ 
+                // //Print out the random character.
+                // echo $randomString[$randomIndex] ;
+            
+
+            $newChar= $randomString[$randomIndex];
+                if ($newChar == (ctype_upper($newChar))) {
+                    echo strtolower($newChar). $randomString;
+                } else {
+                    echo strtoupper($newChar). $randomString;
+                }
+
+            
+                
                 ?>
                
             
