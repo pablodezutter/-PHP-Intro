@@ -9,3 +9,15 @@ $randomstring -> i didn't want to make a whole function for it, so i found this 
 #27th of May
 trying to fix the  function,
 I have put the character i took from the string in front of the string
+
+##Array, associative array and objects
+
+1. Array: An array is a special variable, which can hold more than one value at a time,
+an ordered map
+
+2. Associative array: Associative arrays are arrays that use named keys that you assign to them.
+
+3. Object: An object is a data type which stores data and information on how to process that data.
+
+28th of May
+create an object
