@@ -17,15 +17,15 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">xx
+        <div class="col-md-3"></br>
             <buttontype="button" class="btn btn-primary" >Generate Object</button>
 
         </div>
-        <div class="col-md-3">xx
-            <button type="button" class="btn btn-alert">Revert Object</button>
+        <div class="col-md-3"></br>
+            <button type="button" class="btn btn-warning">Revert Object</button>
 
         </div>
-        <div class="col-md-3">xx
+        <div class="col-md-3"></br>
             <form action="">
             <input type="text">
             <button type="button" class="btn btn-danger" >Get a nickname</button>
