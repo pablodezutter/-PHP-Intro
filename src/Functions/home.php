@@ -9,6 +9,10 @@
         col-md-3{ 
             border: 10px solid yellow;
         }
+        button{
+            margin: 10px;
+
+        }
         
         
     </style>
