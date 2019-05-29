@@ -19,5 +19,8 @@ an ordered map
 
 3. Object: An object is a data type which stores data and information on how to process that data.
 
-28th of May
+#28th of May
 create an object
+i got some help with the next exercises:> "Write a for-loop that adds an item to all of the above".
+
+//Loop trough assoc array adding all items to the object -> not sure if this is correct
