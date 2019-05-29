@@ -24,3 +24,4 @@ create an object
 i got some help with the next exercises:> "Write a for-loop that adds an item to all of the above".
 
 //Loop trough assoc array adding all items to the object -> not sure if this is correct
+cookie: still a flaw

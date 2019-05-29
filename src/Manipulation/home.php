@@ -91,7 +91,19 @@ echo"</br>";
 foreach($instrument as $value){
          $object->Pablo1=$value;
          var_dump ($object);
-}
+};
+
+
+
+setcookie("mainCookie",$object);
+var_dump(mainCookie);
+
+echo"</br>";
+
+//readable way
+echo"<pre>";
+print_r($object);
+echo"</pre>";
 
 
 ?>
