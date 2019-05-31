@@ -41,6 +41,22 @@ function divide($music)
       */
     } else {
         echo floor(count($music) / 2 - 1);
+        /*
+        Review:
+        Denk eens na wat floor(count($music) / 2 - 1) eigenlijk doet.
+
+        Als de array 3 elementen lang is:
+          3 / 2 = 1,5
+          1,5 - 1 = 0,5
+          floor (0,5) = 0  -> Je komt dus op een lege array uit.
+
+        Stel dat een array 9 elementen bevat, dan wil je er 4 overhouden, juist?
+          9 / 2 = 4,5
+          4,5 - 1 = 3,5
+          floor (3,5) = 3 -> Je komt op 3 uit ipv op 4!
+
+
+        */
         echo $music;
     }
 }
