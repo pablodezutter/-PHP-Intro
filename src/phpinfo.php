@@ -12,6 +12,7 @@
         phpinfo();
         
         ?> 
-    
+        <!-- Bestand veranderd naar phpinfo.php om de apache server toe te laten 
+        de folder te tonen - nog zo makkelijk om daarna alles te gaan bekijken in de subfolders. -->  
 </body>
 </html>

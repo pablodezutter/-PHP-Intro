@@ -8,10 +8,11 @@
 </head>
 <body>
     <h1>GOedemiddag</h1>
-        <?php 
-        echo "hello world!";
-        
-        ?> 
-    
+        <?php
+echo "hello world!";
+
+?>
+        <p>Een php bestand moet de extensie .php hebben, anders wordt de code niet door de PHP server 
+            vertaald naar iets waar de browser meer verder kan en zien we dus ook niks op het scherm verschijnen.</p>
 </body>
 </html>

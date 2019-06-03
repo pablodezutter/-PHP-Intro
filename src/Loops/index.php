@@ -16,35 +16,79 @@
             <div class="col">
                 <h1>Welkom to the lottery!</h1>
                 <h2>Wanna play?</h2>
-                    <p>Push this button</p>
-                    <button class="btn btn-success action="Lottery.php" method="POST" ">Play now</button>
-                    </br>
-                    <ul>
-                    <?php
-                        $pics = array("burger0.png", "friet1.png", "pizza2.png");
-                        shuffle($pic);
-                        foreach ($pics as $pic)
-                        echo "<img src='Loops/img/burger0.png'> </br>";
-                        
-                        //var_dump ($pic);
-                        for ($i=0;$i<2;$i++){
-                            echo "<li><img src='$pic[$i]'></li>" . "</br>";
-                            echo "<li><img src='$pic[$i]'></li>" . "</br>";
-                            echo "<li><img src='$pic[$i]'></li>" . "</br>";
-                        }
-                        ?>
-                    </ul>
-                    <input name="0" type="image">
-                    <input name="1" type="image">
-                    <input name="2" type="image">
 
-                     </p>  
+                    </br>
+
+                    <form method="post" class=" m-5">
+                        <label for="pos1">Guess First</label>
+                        <select id="pos1" name="pos1"  class="form-control">
+                            <option value="🍔">🍔</option>
+                            <option value="🍟">🍟</option>
+                            <option value="🍕">🍕</option>   
+                        </select>                 </select>
+
+                        <label for="pos2">Guess Second</label>
+                        <select id="pos2" name="pos2"  class="form-control">
+                            <option value="🍔">🍔</option>
+                            <option value="🍟">🍟</option>
+                            <option value="🍕">🍕</option>   
+                        </select>  
+
+                        <label for="pos3">Guess Third</label>
+                        <select id="pos3" name="pos3"  class="form-control">
+                            <option value="🍔">🍔</option>
+                            <option value="🍟">🍟</option>
+                            <option value="🍕">🍕</option>   
+                        </select>  
+
+                        <button class="btn btn-success btn-block mt-3" action="Lottery.php" type="submit">Play now</button>
+                    </form>
+
+
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                        $userGuess = [$_POST['pos1'], $_POST['pos2'],$_POST['pos3']];
+
+                        echo ("<p>Your guess: ");
+                        foreach ($userGuess as $pos) {
+                            echo " ".$pos." ";
+                        }
+                        echo("<br>");
+                        print_r(array_values($userGuess));
+                        echo ("</p>");
+
+                        echo ("<p>Computer says: ");
+                        $pics = array("🍔", "🍟", "🍕");
+                        shuffle($pics);
+                        // Met shuffle schud je wel de array en verander je dus de volgorde binnen de array, maar krijg je nooit 2 keer hetzelfde beeldje.
+                        // Dit is OK als je interpretatie van de opdracht is dat de gebruiker de volgorde moet raden,  maar niet voor een slot-machine interpretatie.
+
+                        foreach ($pics as $pic) {
+                            echo " ".$pic." ";
+                        }
+                        echo("<br>");
+                        print_r($pics);
+                        echo ("</p>");
+                        
+
+                        if ($pics == array_values($userGuess)) {
+                            echo ("<p>Winner. You can read minds!</p>");
+                        } else {
+                            echo ("<p>Nope ... Try again!</p>");
+                        }
+                        
+                        // re-initialize $_POST
+                        $_POST = [];
+                    }
+                    ?>
+
             </div>
         </div>
 </div>
 
 
-
+<!-- 
 //First try:
  //$img_0="img/burger0.png";
 // $img_1="img/friet1.png";
@@ -68,7 +112,7 @@
 
 
 //?>
-
+-->
 
 
 </body>
