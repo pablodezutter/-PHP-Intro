@@ -13,17 +13,16 @@ services:
             - mysql_db:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: messenger
-            MYSQL_USER: messenger
-            MYSQL_PASSWORD: messenger
     phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
         ports:
             - "8001:80"
+        depends_on:
+            - "mysql"
         environment:
             PMA_HOST: mysql
-            PMA_USER: messenger
-            PMA_PASSWORD: messenger
+            PMA_USER: root
+            PMA_PASSWORD: root
     mailcatcher:
         image: tophfr/mailcatcher
         ports:
